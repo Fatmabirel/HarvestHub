@@ -1,6 +1,6 @@
 ﻿namespace EntityLayer.Concrete
 {
-    public class News
+    public class Announcement
     {
         public int Id { get; set; }
         public string Title { get; set; }
