@@ -1,3 +1,5 @@
+using BusinessLayer.Abstract;
+using EntityLayer.Concrete;
 using Microsoft.AspNetCore.Mvc;
 using PresentationLayer.Models;
 using System.Diagnostics;
@@ -6,16 +8,34 @@ namespace PresentationLayer.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
+        private readonly IContactService _contactService;
+        public HomeController(IContactService contactService)
         {
-            _logger = logger;
+            _contactService = contactService;
         }
 
         public IActionResult Index()
         {
             return View();
+        }
+
+        [HttpGet]
+        public PartialViewResult SendMessage()
+        {
+            return PartialView();
+        }
+
+        [HttpPost]
+        public IActionResult SendMessage(Contact contact)
+        {
+            contact.Date = DateTime.Now;
+            _contactService.Add(contact);
+            return RedirectToAction("Index","Home");
+        }
+
+        public PartialViewResult ScriptPartial()
+        {
+            return PartialView();
         }
 
         public IActionResult Privacy()
