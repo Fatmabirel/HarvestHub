@@ -27,6 +27,9 @@ builder.Services.AddScoped<IAddressDal, EfAddressDal>();
 builder.Services.AddScoped<IContactService, ContactManager>();
 builder.Services.AddScoped<IContactDal, EfContactDal>();
 
+builder.Services.AddScoped<ISocialMediaService, SocialMediaManager>();
+builder.Services.AddScoped<ISocialMediaDal, EfSocialMediaDal>();
+
 builder.Services.AddDbContext<AgricultureContext>();
 
 var app = builder.Build();

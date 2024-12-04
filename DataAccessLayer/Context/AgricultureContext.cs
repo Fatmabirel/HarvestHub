@@ -15,6 +15,7 @@ namespace DataAccessLayer.Context
         public DbSet<Service> Services { get; set; }
         public DbSet<Team> Teams { get; set; }
         public DbSet<Announcement> Announcements { get; set; }
+        public DbSet<SocialMedia> SocialMedias { get; set; }
 
     }
 
