@@ -11,7 +11,7 @@ namespace BusinessLayer.Validation_Rules
             RuleFor(x => x.Name).MinimumLength(5).MaximumLength(30).WithMessage("İsim alanı 5 ile 30 karakter arasında olmalıdır!");
 
             RuleFor(x => x.Title).NotEmpty().WithMessage("Ünvan alanı boş geçilemez!");
-            RuleFor(x => x.Title).MinimumLength(3).MaximumLength(20).WithMessage("Ünvan alanı 3 ile 20 karakter arasında olmalıdır!");
+            RuleFor(x => x.Title).MinimumLength(3).MaximumLength(30).WithMessage("Ünvan alanı 3 ile 30 karakter arasında olmalıdır!");
 
             RuleFor(x => x.ImageUrl).NotEmpty().WithMessage("Görsel alanı boş geçilemez!");
         }

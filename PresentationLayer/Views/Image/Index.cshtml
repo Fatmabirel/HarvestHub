@@ -26,7 +26,7 @@
                             @foreach (var item in Model)
                             {
                                 <tr>
-                                    <td class="py-1"><img src="@item.ImageUrl" alt="image" /></td>
+                                    <td class="py-1"><img src="/@item.ImageUrl" alt="image" /></td>
                                     <td>@item.Title</td>
                                     <td>@item.Description</td>
                                     <td><a href="/Image/DeleteImage/@item.Id" class="btn btn-outline-danger">Sil</a></td>
