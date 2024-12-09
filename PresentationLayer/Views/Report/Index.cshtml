@@ -2,27 +2,29 @@
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
-
-<h2 style="text-align: center; margin-bottom: 20px; color: #333;">Excel Raporları</h2>
-<div style="display: flex; flex-direction: column; align-items: center; gap: 15px;">
-    <div class="form-group">
-        <a href="/Report/StaticReport/" class="btn btn-outline-info"
-           style="display: inline-block; padding: 10px 20px; border: 2px solid #17a2b8; color: #17a2b8; border-radius: 5px; text-decoration: none; font-size: 16px; transition: all 0.3s ease;">
-            Statik Rapor
-        </a>
-    </div>
-
-    <div class="form-group">
-        <a href="/Report/ContactReport/" class="btn btn-outline-primary"
-           style="display: inline-block; padding: 10px 20px; border: 2px solid #007bff; color: #007bff; border-radius: 5px; text-decoration: none; font-size: 16px; transition: all 0.3s ease;">
-            Mesaj Raporları
-        </a>
-    </div>
-
-    <div class="form-group">
-        <a href="/Report/AnnouncementReport/" class="btn btn-outline-primary"
-           style="display: inline-block; padding: 10px 20px; border: 2px solid #007bff; color: #007bff; border-radius: 5px; text-decoration: none; font-size: 16px; transition: all 0.3s ease;">
-            Duyuru Raporları
-        </a>
+<div class="col-lg-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Raporlar</h4>
+            <div class="table-responsive pt-3">
+                <table class="table table-striped text-center">
+                    <thead>
+                        <tr>
+                            <th>Statik Rapor</th>
+                            <th>Mesaj Raporları</th>
+                            <th>Duyuru Raporları</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><a href="/Report/StaticReport/" class="btn btn-outline-info">Görüntüle</a></td>
+                            <td><a href="/Report/ContactReport/" class="btn btn-outline-info">Görüntüle</a></td>
+                            <td><a href="/Report/AnnouncementReport/" class="btn btn-outline-info">Görüntüle</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </div>
 </div>
+
